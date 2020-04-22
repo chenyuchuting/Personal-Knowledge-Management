@@ -1,0 +1,11 @@
+# Windows10夜间模式为灰色无法开启的解决方式
+   1. 右键点击任务栏上的Windows图标，选择【Windows Powershell（管理员）】
+   2. 逐一输入以下指令：
+      2.1 Dism /Online /Cleanup-Image /CheckHealth
+      2.2 Dism /Online /Cleanup-Image /ScanHealth
+      2.3 Dism /Online /Cleanup-Image /RestoreHealth
+      2.4 sfc /scannow
+   3. 重启电脑。
+   4. 如果出现”有一些文件无法修复“的回报，重复步骤1-3几次。
+   
+# 
